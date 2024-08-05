@@ -2,6 +2,42 @@ import streamlit as st
 #from dotenv import load_dotenv
 #from dotenv import dotenv
 #dotenv = dotenv('/.env')
+
+try:
+    from dotenv import load_dotenv
+except ImportError as e:
+    
+    # You can also use logging instead of print if needed
+    import logging
+    logging.error(f"Error importing dotenv module: {e}")
+    # If you want to exit the script if this import fails, uncomment the next line
+    # raise SystemExit(e)
+
+import os
+
+# Load environment variables from a .env file
+try:
+    load_dotenv()
+except Exception as e:
+    
+    logging.error(f"Error loading .env file: {e}")
+    # Handle the error or exit if necessary
+    # raise SystemExit(e)
+
+# Access the environment variables
+try:
+    api_key = os.getenv('API_KEY')
+    if api_key is None:
+        raise ValueError("API_KEY is not set in the environment variables.")
+except Exception as e:
+  
+    logging.error(f"Error accessing environment variables: {e}")
+    # Handle the error or exit if necessary
+    # raise SystemExit(e)
+
+# Proceed with the rest of your code
+
+
 import dotenv
 #dotenv.load_dotenv()
 from dotenv import load_dotenv
