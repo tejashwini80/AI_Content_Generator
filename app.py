@@ -2,7 +2,7 @@ import streamlit as st
 #from dotenv import load_dotenv
 #from dotenv import dotenv
 #dotenv = dotenv('/.env')
-#import dotenv
+import dotenv
 #dotenv.load_dotenv()
 from dotenv import load_dotenv
 import os
