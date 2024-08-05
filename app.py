@@ -1,5 +1,7 @@
 import streamlit as st
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
+from dotenv import Dotenv
+dotenv = Dotenv('/.env')
 import google.generativeai as genai
 from google.generativeai.types import HarmCategory, HarmBlockThreshold
 import os
