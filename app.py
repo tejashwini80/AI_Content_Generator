@@ -1,9 +1,17 @@
 import streamlit as st
 #from dotenv import load_dotenv
-from dotenv import dotenv
-dotenv = dotenv('/.env')
-import dotenv
-dotenv.load_dotenv()
+#from dotenv import dotenv
+#dotenv = dotenv('/.env')
+#import dotenv
+#dotenv.load_dotenv()
+from dotenv import load_dotenv
+import os
+
+# Load environment variables from a .env file
+load_dotenv()
+
+# Access the environment variables
+api_key = os.getenv('API_KEY')
 import google.generativeai as genai
 from google.generativeai.types import HarmCategory, HarmBlockThreshold
 import os
