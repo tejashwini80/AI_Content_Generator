@@ -1,7 +1,7 @@
 import streamlit as st
 #from dotenv import load_dotenv
-#from dotenv import Dotenv
-#dotenv = Dotenv('/.env')
+from dotenv import Dotenv
+dotenv = Dotenv('/.env')
 import dotenv
 dotenv.load_dotenv()
 import google.generativeai as genai
